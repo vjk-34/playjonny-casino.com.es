@@ -1,0 +1,41 @@
+// _theme_variables_vintage.scss
+body.theme-variant-vintage {
+  --theme-color-primary: #81c784; // Soft Green
+  --theme-color-primary-dark: #66bb6a;
+  --theme-color-primary-rgb: 129,199,132;
+  --theme-color-secondary: #ffb74d; // Soft Orange
+  --theme-color-accent: #e57373; // Soft Red
+  --theme-text-color: #546e7a; // Blue Gray Text
+  --theme-text-color-light: #78909c;
+  --theme-text-color-headings: #37474f;
+  --theme-bg-color: #fff8e1; // Light Cream Background
+  --theme-bg-color-alt: #ffecb3; // Lighter Orange Alt Bg
+  --theme-bg-color-rgb: 255,248,225;
+  --theme-border-color: #ffe082;
+  --theme-border-color-light: #fff1c6;
+  --theme-button-text-color: #ffffff;
+  --theme-button-bg: linear-gradient(135deg, #81c784 0%, #66bb6a 100%);
+  --theme-button-hover-bg: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
+  --theme-button-secondary-bg: transparent;
+  --theme-button-secondary-text-color: var(--theme-text-color-headings);
+  --theme-button-secondary-border-color: var(--theme-color-secondary);
+  --theme-button-secondary-hover-bg: #ffefbd;
+  --theme-button-secondary-hover-text-color: #3f535c; // Darker Blue Gray
+  --theme-button-secondary-hover-border-color: var(--theme-color-secondary);
+  --theme-font-primary: 'Lora', serif;
+  --theme-font-secondary: 'Oswald', sans-serif;
+  --theme-border-radius: 3px;
+  --theme-border-radius-lg: 5px;
+  --theme-footer-bg: #455a64; // Darker Blue Gray Footer
+  --theme-footer-text: var(--theme-bg-color-alt);
+  --theme-footer-border-color: var(--theme-color-secondary);
+  --theme-blockquote-border-color: var(--theme-color-secondary);
+  --theme-blockquote-bg: var(--theme-bg-color-alt);
+  --theme-code-inline-text: var(--theme-color-primary-dark);
+  --theme-code-inline-bg: rgba(var(--theme-color-primary-rgb), 0.08);
+  --theme-code-block-bg: #eceff1; // Light Gray code block
+  --theme-code-block-text: #37474f;
+  --theme-table-header-bg: var(--theme-bg-color-alt);
+  --theme-table-stripe-bg: #fffcf0;
+  --theme-contact-icon-bg: rgba(var(--theme-color-primary-rgb), 0.1);
+}

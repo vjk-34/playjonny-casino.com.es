@@ -1,0 +1,28 @@
+// assets/scss/main.scss
+// Главный SCSS файл темы
+
+// 1. Базовые SCSS переменные (не CSS Custom Properties)
+@import 'variables';
+
+// 2. Базовые CSS Custom Properties (:root)
+@import 'theme_variables_base';
+
+// 3. Переопределения для каждой вариации темы
+@import 'theme_variables_ocean';
+@import 'theme_variables_forest';
+@import 'theme_variables_sunset';
+@import 'theme_variables_stone';
+@import 'theme_variables_earth';
+@import 'theme_variables_minty';
+@import 'theme_variables_vineyard';
+@import 'theme_variables_graphite';
+@import 'theme_variables_linen';
+@import 'theme_variables_vintage';
+
+// 4. Основные стили темы, использующие CSS Custom Properties
+@import 'base';        // Базовые стили HTML, body, заголовки и т.д.
+@import 'layout';      // Стили для хедера, футера, контейнера
+@import 'components';  // Стили для кнопок, пагинации, меню, TOC и т.д.
+@import 'footer';      // Более детальные стили футера (возможно, часть уже в layout)
+@import 'contact';     // Стили для страницы контактов
+@import 'content';     // Стили для основного контента (форматирование Markdown)

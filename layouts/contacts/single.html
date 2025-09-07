@@ -1,0 +1,31 @@
+{{- define "main" -}}
+{{- $layout := site.Params.contactLayoutVariant | default "info-left" -}}
+
+<div class="container contact-page contact-layout-{{ $layout }}">
+  {{- partial "breadcrumbs.html" . -}}
+  <div class="page-header">
+    <h1>{{ site.Params.uiText.contactPageTitle | default .Title }}</h1>
+  </div>
+
+  <div class="contact-grid contact-grid-{{ $layout }}">
+
+    {{- if eq $layout "info-left" -}}
+    {{ partial "contact/info.html" . }}
+    {{ partial "contact/form.html" . }}
+
+    {{- else if eq $layout "form-left" -}}
+    {{ partial "contact/form.html" . }}
+    {{ partial "contact/info.html" . }}
+
+    {{- else if eq $layout "stacked" -}}
+    {{ partial "contact/info.html" . }}
+    {{ partial "contact/form.html" . }}
+    {{- else -}}
+    {{- warnf "Unknown contactLayoutVariant '%s'. Falling back to 'info-left'." $layout -}}
+    {{ partial "contact/info.html" . }}
+    {{ partial "contact/form.html" . }}
+    {{- end -}}
+
+  </div>
+</div>
+{{- end -}}

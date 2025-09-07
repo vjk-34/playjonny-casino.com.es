@@ -1,0 +1,18 @@
+{{- $page := . -}}
+{{- with $page.Params.faq -}}
+<section class="faq-section">
+  <h2>{{ site.Params.uiText.faqTitle | default "Perguntas Frequentes" }}</h2>
+  <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+    {{- range . -}}
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <h3 class="faq-question" itemprop="name">{{ .question | $.Page.RenderString (dict "display" "inline") | safeHTML }}</h3>
+        <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">
+            {{- .answer | $.Page.RenderString (dict "display" "block") | safeHTML -}}
+          </div>
+        </div>
+      </div>
+    {{- end -}}
+  </div>
+</section>
+{{- end -}}

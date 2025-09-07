@@ -1,0 +1,41 @@
+// _theme_variables_earth.scss
+body.theme-variant-earth {
+  --theme-color-primary: #a1887f;
+  --theme-color-primary-dark: #847065;
+  --theme-color-primary-rgb: 161,136,127;
+  --theme-color-secondary: #bcaaa4;
+  --theme-color-accent: #ffab40;
+  --theme-text-color: #5d4037;
+  --theme-text-color-light: #8d6e63;
+  --theme-text-color-headings: #4e342e;
+  --theme-bg-color: #fefcfb;
+  --theme-bg-color-alt: #f5f1ee;
+  --theme-bg-color-rgb: 254,252,251;
+  --theme-border-color: #e6e0dc;
+  --theme-border-color-light: #f0ebe7;
+  --theme-button-text-color: #ffffff;
+  --theme-button-bg: var(--theme-color-primary);
+  --theme-button-hover-bg: var(--theme-color-primary-dark);
+  --theme-button-secondary-bg: transparent;
+  --theme-button-secondary-text-color: var(--theme-color-primary-dark);
+  --theme-button-secondary-border-color: var(--theme-color-primary);
+  --theme-button-secondary-hover-bg: var(--theme-bg-color-alt);
+  --theme-button-secondary-hover-text-color: var(--theme-color-primary-dark);
+  --theme-button-secondary-hover-border-color: var(--theme-color-primary-dark);
+  --theme-font-primary: 'Noto Sans', sans-serif;
+  --theme-font-secondary: 'Playfair Display', serif;
+  --theme-border-radius: 2px;
+  --theme-border-radius-lg: 4px;
+  --theme-footer-bg: var(--theme-text-color-headings);
+  --theme-footer-text: var(--theme-color-secondary);
+  --theme-footer-border-color: var(--theme-color-accent);
+  --theme-blockquote-border-color: var(--theme-color-secondary);
+  --theme-blockquote-bg: var(--theme-bg-color-alt);
+  --theme-code-inline-text: var(--theme-color-primary-dark);
+  --theme-code-inline-bg: rgba(var(--theme-color-primary-rgb), 0.08);
+  --theme-code-block-bg: #4e342e;
+  --theme-code-block-text: #efebe9;
+  --theme-table-header-bg: var(--theme-bg-color-alt);
+  --theme-table-stripe-bg: #ffffff;
+  --theme-contact-icon-bg: rgba(var(--theme-color-primary-rgb), 0.1);
+}

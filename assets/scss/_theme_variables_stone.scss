@@ -1,0 +1,41 @@
+// _theme_variables_stone.scss
+body.theme-variant-stone {
+  --theme-color-primary: #6c757d;
+  --theme-color-primary-dark: #5a6268;
+  --theme-color-primary-rgb: 108,117,125;
+  --theme-color-secondary: #adb5bd;
+  --theme-color-accent: #ffc107;
+  --theme-text-color: #343a40;
+  --theme-text-color-light: #6c757d;
+  --theme-text-color-headings: #212529;
+  --theme-bg-color: #f8f9fa;
+  --theme-bg-color-alt: #e9ecef;
+  --theme-bg-color-rgb: 248,249,250;
+  --theme-border-color: #dee2e6;
+  --theme-border-color-light: #f1f3f5;
+  --theme-button-text-color: #ffffff;
+  --theme-button-bg: var(--theme-color-primary);
+  --theme-button-hover-bg: var(--theme-color-primary-dark);
+  --theme-button-secondary-bg: var(--theme-bg-color);
+  --theme-button-secondary-text-color: var(--theme-text-color-headings);
+  --theme-button-secondary-border-color: var(--theme-border-color);
+  --theme-button-secondary-hover-bg: var(--theme-bg-color-alt);
+  --theme-button-secondary-hover-text-color: var(--theme-text-color-headings);
+  --theme-button-secondary-hover-border-color: var(--theme-text-color-light);
+  --theme-font-primary: 'Inter', sans-serif;
+  --theme-font-secondary: 'Inter', sans-serif;
+  --theme-border-radius: 4px;
+  --theme-border-radius-lg: 6px;
+  --theme-footer-bg: #343a40;
+  --theme-footer-text: var(--theme-color-secondary);
+  --theme-footer-border-color: var(--theme-color-accent);
+  --theme-blockquote-border-color: var(--theme-color-secondary);
+  --theme-blockquote-bg: var(--theme-bg-color-alt);
+  --theme-code-inline-text: var(--theme-color-primary-dark);
+  --theme-code-inline-bg: rgba(var(--theme-color-primary-rgb), 0.08);
+  --theme-code-block-bg: #343a40;
+  --theme-code-block-text: #f8f9fa;
+  --theme-table-header-bg: var(--theme-bg-color-alt);
+  --theme-table-stripe-bg: #ffffff;
+  --theme-contact-icon-bg: rgba(var(--theme-color-primary-rgb), 0.1);
+}

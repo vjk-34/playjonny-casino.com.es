@@ -1,0 +1,43 @@
+// _theme_variables_graphite.scss
+body.theme-variant-graphite {
+  --theme-color-primary: #00bcd4; // Cyan primary
+  --theme-color-primary-dark: #0097a7;
+  --theme-color-primary-rgb: 0,188,212;
+  --theme-color-secondary: #607d8b; // Blue gray secondary
+  --theme-color-accent: #ffeb3b; // Yellow accent
+  --theme-text-color: #cfd8dc; // Light gray text
+  --theme-text-color-light: #90a4ae;
+  --theme-text-color-headings: #eceff1; // Very light gray headings
+  --theme-bg-color: #263238; // Dark blue-gray background
+  --theme-bg-color-alt: #37474f;
+  --theme-bg-color-rgb: 38,50,56;
+  --theme-border-color: #455a64;
+  --theme-border-color-light: #546e7a;
+  --theme-button-text-color: #263238; // Dark text on cyan button
+  --theme-text-color-link: var(--theme-color-primary);
+  --theme-text-color-link-hover: #22e6ff; // Lighter cyan hover
+  --theme-button-bg: var(--theme-color-primary);
+  --theme-button-hover-bg: var(--theme-color-primary-dark);
+  --theme-button-secondary-bg: transparent;
+  --theme-button-secondary-text-color: var(--theme-text-color-light);
+  --theme-button-secondary-border-color: var(--theme-border-color-light);
+  --theme-button-secondary-hover-bg: rgba(var(--theme-color-primary-rgb), 0.1);
+  --theme-button-secondary-hover-text-color: var(--theme-text-color-headings);
+  --theme-button-secondary-hover-border-color: var(--theme-color-primary);
+  --theme-font-primary: 'Lato', sans-serif;
+  --theme-font-secondary: 'Lato', sans-serif;
+  --theme-border-radius: 3px;
+  --theme-border-radius-lg: 5px;
+  --theme-footer-bg: #1c2529; // Very dark footer
+  --theme-footer-text: var(--theme-text-color-light);
+  --theme-footer-border-color: var(--theme-color-primary);
+  --theme-blockquote-border-color: var(--theme-color-primary);
+  --theme-blockquote-bg: var(--theme-bg-color-alt);
+  --theme-code-inline-bg: rgba(var(--theme-color-primary-rgb), 0.15);
+  --theme-code-inline-text: var(--theme-color-primary);
+  --theme-code-block-bg: #1c2529;
+  --theme-code-block-text: var(--theme-text-color);
+  --theme-table-header-bg: var(--theme-bg-color-alt);
+  --theme-table-stripe-bg: #2c383e;
+  --theme-contact-icon-bg: rgba(var(--theme-color-primary-rgb), 0.15);
+}

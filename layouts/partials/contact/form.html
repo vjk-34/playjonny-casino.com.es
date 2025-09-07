@@ -1,0 +1,46 @@
+<div class="contact-form-wrapper">
+  <h2>{{ site.Params.uiText.contactFormTitle | default "Enviar uma mensagem" }}</h2>
+  <form class="contact-form" action="{{ site.Params.contactForm.action }}" method="POST" {{- if
+    site.Params.contactForm.netlify -}} netlify {{- end -}}>
+    <div class="form-group">
+      <label for="form-name">{{ site.Params.uiText.contactFormLabelName | default "Seu nome" }}<span
+          class="required">*</span></label>
+      <input type="text" id="form-name" name="name" required
+        placeholder="{{ site.Params.uiText.contactFormPlaceholderName | default " Nome Sobrenome" }}">
+    </div>
+    <div class="form-group">
+      <label for="form-phone">{{ site.Params.uiText.contactFormLabelPhone | default "Número de telefone" }}<span
+          class="required">*</span></label>
+      <input type="tel" id="form-phone" name="phone" required
+        placeholder="{{ site.Params.uiText.contactFormPlaceholderPhone | default " Número de telefone" }}">
+    </div>
+    <div class="form-group">
+      <label for="form-email">{{ site.Params.uiText.contactFormLabelEmail | default "E-mail" }}<span
+          class="required">*</span></label>
+      <input type="email" id="form-email" name="email" required
+        placeholder="{{ site.Params.uiText.contactFormPlaceholderEmail | default " your.email@example.com" }}">
+    </div>
+    <div class="form-group">
+      <label for="form-message">{{ site.Params.uiText.contactFormLabelMessage | default "Mensagem" }}<span
+          class="required">*</span></label>
+      <textarea id="form-message" name="message" rows="5" required
+        placeholder="{{ site.Params.uiText.contactFormPlaceholderMessage | default " Digite sua mensagem aqui..."
+        }}"></textarea>
+    </div>
+    {{- if site.Params.contactForm.netlify -}}
+    <input type="hidden" name="form-name" value="contact">
+    {{- end -}}
+    <div class="honeypot" aria-hidden="true" style="position: absolute; left: -5000px;">
+      <label for="bot-field">Não preencha esse campo se você for um ser humano:</label>
+      <input type="text" id="bot-field" name="bot-field" tabindex="-1">
+    </div>
+
+    <div class="form-group form-submit">
+      <button type="submit" class="button">{{ site.Params.uiText.contactFormButtonSubmit | default "Enviar mensagem"
+        }}</button>
+    </div>
+
+    <p class="required-notice"><small><span class="required">*</span> {{ site.Params.uiText.contactFormRequiredNotice |
+        default "Campos obrigatórios" }}</small></p>
+  </form>
+</div>

@@ -1,0 +1,42 @@
+// _theme_variables_ocean.scss
+body.theme-variant-ocean {
+  --theme-color-primary: #0077be;
+  --theme-color-primary-dark: #005a93;
+  --theme-color-primary-rgb: 0,119,190;
+  --theme-color-secondary: #4fc3f7;
+  --theme-color-accent: #ffca28;
+  --theme-text-color: #37474f;
+  --theme-text-color-light: #78909c;
+  --theme-text-color-headings: #263238;
+  --theme-bg-color: #ffffff;
+  --theme-bg-color-alt: #f4f8fa;
+  --theme-bg-color-rgb: 255,255,255;
+  --theme-border-color: #e1f5fe;
+  --theme-border-color-light: #f1fafd;
+  --theme-button-text-color: #ffffff;
+  --theme-text-color-link-hover: var(--theme-color-secondary); // Пример изменения hover цвета ссылки
+  --theme-button-bg: linear-gradient(135deg, #0077be 0%, #005a93 100%);
+  --theme-button-hover-bg: linear-gradient(135deg, #005a93 0%, #004471 100%);
+  --theme-button-secondary-bg: transparent;
+  --theme-button-secondary-text-color: var(--theme-color-primary);
+  --theme-button-secondary-border-color: var(--theme-color-primary);
+  --theme-button-secondary-hover-bg: rgba(var(--theme-color-primary-rgb), 0.07);
+  --theme-button-secondary-hover-text-color: var(--theme-color-primary-dark);
+  --theme-button-secondary-hover-border-color: var(--theme-color-primary-dark);
+  --theme-font-primary: 'Open Sans', sans-serif;
+  --theme-font-secondary: 'Lato', sans-serif;
+  --theme-border-radius: 4px;
+  --theme-border-radius-lg: 8px;
+  --theme-footer-bg: var(--theme-color-primary-dark);
+  --theme-footer-text: #b3e5fc;
+  --theme-footer-border-color: var(--theme-color-secondary);
+  --theme-blockquote-border-color: var(--theme-color-secondary);
+  --theme-blockquote-bg: var(--theme-bg-color-alt);
+  --theme-code-inline-text: var(--theme-color-primary-dark);
+  --theme-code-inline-bg: rgba(var(--theme-color-primary-rgb), 0.08);
+  --theme-code-block-bg: #263238;
+  --theme-code-block-text: #e0f7fa;
+  --theme-table-header-bg: var(--theme-bg-color-alt);
+  --theme-table-stripe-bg: #ffffff;
+  --theme-contact-icon-bg: rgba(var(--theme-color-primary-rgb), 0.1);
+}

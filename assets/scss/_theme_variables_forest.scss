@@ -1,0 +1,41 @@
+// _theme_variables_forest.scss
+body.theme-variant-forest {
+  --theme-color-primary: #388e3c;
+  --theme-color-primary-dark: #27632a;
+  --theme-color-primary-rgb: 56,142,60;
+  --theme-color-secondary: #8d6e63;
+  --theme-color-accent: #ffb300;
+  --theme-text-color: #4e342e;
+  --theme-text-color-light: #795548;
+  --theme-text-color-headings: #3e2723;
+  --theme-bg-color: #f1f8e9;
+  --theme-bg-color-alt: #e8f5e9;
+  --theme-bg-color-rgb: 241,248,233;
+  --theme-border-color: #c8e6c9;
+  --theme-border-color-light: #e1eee2;
+  --theme-button-text-color: #ffffff;
+  --theme-button-bg: var(--theme-color-primary);
+  --theme-button-hover-bg: var(--theme-color-primary-dark);
+  --theme-button-secondary-bg: var(--theme-bg-color);
+  --theme-button-secondary-text-color: var(--theme-color-primary-dark);
+  --theme-button-secondary-border-color: var(--theme-color-secondary);
+  --theme-button-secondary-hover-bg: #eaf4dd;
+  --theme-button-secondary-hover-text-color: var(--theme-color-primary-dark);
+  --theme-button-secondary-hover-border-color: var(--theme-color-primary-dark);
+  --theme-font-primary: 'Source Sans Pro', sans-serif;
+  --theme-font-secondary: 'Merriweather', serif;
+  --theme-border-radius: 3px;
+  --theme-border-radius-lg: 6px;
+  --theme-footer-bg: var(--theme-color-primary-dark);
+  --theme-footer-text: #c8e6c9;
+  --theme-footer-border-color: var(--theme-color-secondary);
+  --theme-blockquote-border-color: var(--theme-color-secondary);
+  --theme-blockquote-bg: var(--theme-bg-color-alt);
+  --theme-code-inline-text: var(--theme-color-primary-dark);
+  --theme-code-inline-bg: rgba(var(--theme-color-primary-rgb), 0.08);
+  --theme-code-block-bg: #3e2723;
+  --theme-code-block-text: #dcedc8;
+  --theme-table-header-bg: var(--theme-bg-color-alt);
+  --theme-table-stripe-bg: #f8fbf5;
+  --theme-contact-icon-bg: rgba(var(--theme-color-primary-rgb), 0.1);
+}

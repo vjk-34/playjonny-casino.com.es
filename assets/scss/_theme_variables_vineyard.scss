@@ -1,0 +1,41 @@
+// _theme_variables_vineyard.scss
+body.theme-variant-vineyard {
+  --theme-color-primary: #8e24aa; // Deep purple
+  --theme-color-primary-dark: #741e8a;
+  --theme-color-primary-rgb: 142,36,170;
+  --theme-color-secondary: #4caf50; // Green secondary
+  --theme-color-accent: #fb8c00; // Orange accent
+  --theme-text-color: #4e342e; // Brown text
+  --theme-text-color-light: #795548;
+  --theme-text-color-headings: #3e2723;
+  --theme-bg-color: #f9fbe7; // Very light lime bg
+  --theme-bg-color-alt: #f0f4c3; // Light lime alt bg
+  --theme-bg-color-rgb: 249,251,231;
+  --theme-border-color: #e6ee9c;
+  --theme-border-color-light: #f0f4c3;
+  --theme-button-text-color: #ffffff;
+  --theme-button-bg: linear-gradient(135deg, #8e24aa 0%, #ab47bc 100%);
+  --theme-button-hover-bg: linear-gradient(135deg, #741e8a 0%, #8e24aa 100%);
+  --theme-button-secondary-bg: transparent;
+  --theme-button-secondary-text-color: var(--theme-color-secondary);
+  --theme-button-secondary-border-color: var(--theme-color-secondary);
+  --theme-button-secondary-hover-bg: #f2f6cc;
+  --theme-button-secondary-hover-text-color: #3d8b40; // Darker green
+  --theme-button-secondary-hover-border-color: #3d8b40;
+  --theme-font-primary: 'Raleway', sans-serif;
+  --theme-font-secondary: 'Playfair Display', serif;
+  --theme-border-radius: 5px;
+  --theme-border-radius-lg: 8px;
+  --theme-footer-bg: #3e2723; // Dark brown footer
+  --theme-footer-text: var(--theme-bg-color-alt);
+  --theme-footer-border-color: var(--theme-color-secondary);
+  --theme-blockquote-border-color: var(--theme-color-secondary);
+  --theme-blockquote-bg: var(--theme-bg-color-alt);
+  --theme-code-inline-text: var(--theme-color-primary-dark);
+  --theme-code-inline-bg: rgba(var(--theme-color-primary-rgb), 0.08);
+  --theme-code-block-bg: #424242; // Gray code block
+  --theme-code-block-text: #f5f5f5;
+  --theme-table-header-bg: var(--theme-bg-color-alt);
+  --theme-table-stripe-bg: #fcfde7;
+  --theme-contact-icon-bg: rgba(var(--theme-color-primary-rgb), 0.1);
+}

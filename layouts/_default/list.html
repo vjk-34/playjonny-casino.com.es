@@ -1,0 +1,33 @@
+{{- define "main" -}}
+  {{- $isHome := .IsHome -}}
+  <div class="container {{- if $isHome -}} home-page {{- else -}} list-page {{- end -}}">
+
+    {{- if not $isHome -}}
+      {{- partial "breadcrumbs.html" . -}}
+    {{- end -}}
+
+    <header class="page-header">
+      {{- with .Content -}}
+        <div class="content-area {{- if $isHome -}} home-content list-description {{- else -}} list-description {{- end -}}">
+          {{ . }}
+        </div>
+      {{- end -}}
+    </header>
+
+    {{- if not $isHome -}}
+      <div class="page-list">
+        {{- range .Paginator.Pages -}}
+          <article class="list-item">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            {{- with .Description -}}<p>{{ . }}</p>{{- end -}}
+            <a href="{{ .RelPermalink }}" class="read-more">{{ site.Params.uiText.listReadMore | default "Read more →" }}</a>
+          </article>
+        {{- end -}}
+      </div>
+      {{- partial "pagination.html" . -}}
+    {{- end -}}
+
+    {{- partial "faq.html" . -}}
+
+  </div>
+{{- end -}}

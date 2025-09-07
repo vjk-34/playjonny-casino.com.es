@@ -1,0 +1,66 @@
+<div class="contact-info">
+  <h2>{{ site.Params.uiText.contactInfoTitle | default "Informações de contato" }}</h2>
+  {{- with .Content -}}
+  <div class="contact-intro content-area">
+    {{ . }}
+  </div>
+  {{- end -}}
+
+  <ul class="contact-details">
+    {{- with site.Params.contact -}}
+    {{- if .address_text -}}
+    <li class="contact-details-item">
+      <span class="icon">📍</span>
+      <div class="contact-text-content">
+        <div class="contact-label"><strong>{{ site.Params.uiText.contactLabelAddress | default "Endereço"}}:</strong>
+        </div>
+        <div class="contact-value">
+          {{- if .address_url -}}
+          <a href="{{ .address_url }}" target="_blank" rel="noopener noreferrer">{{ .address_text | safeHTML }}</a>
+          {{- else -}}
+          {{ .address_text | replace "\n" "<br>" | safeHTML }}
+          {{- end -}}
+        </div>
+      </div>
+    </li>
+    {{- end -}}
+    {{- if .phone_display -}}
+    <li class="contact-details-item">
+      <span class="icon">📞</span>
+      <div class="contact-text-content">
+        <div class="contact-label"><strong>{{ site.Params.uiText.contactLabelPhone | default "Telefone" }}:</strong>
+        </div>
+        <div class="contact-value">
+          {{- if .phone_link -}}
+          <a href="tel:{{ .phone_link }}">{{ .phone_display }}</a>
+          {{- else -}}
+          {{ .phone_display }}
+          {{- end -}}
+        </div>
+      </div>
+    </li>
+    {{- end -}}
+    {{- end -}}
+
+    {{- with site.Params.contact.email -}}
+    <li class="contact-details-item">
+      <span class="icon">✉️</span>
+      <div class="contact-text-content">
+        <div class="contact-label"><strong>{{ site.Params.uiText.contactLabelEmail | default "E-mail" }}:</strong></div>
+        <div class="contact-value"><a href="mailto:{{ . }}">{{ . }}</a></div>
+      </div>
+    </li>
+    {{- end -}}
+
+    {{- with site.Params.contact.workingHours -}}
+    <li class="contact-details-item">
+      <span class="icon">⏰</span>
+      <div class="contact-text-content">
+        <div class="contact-label"><strong>{{ site.Params.uiText.contactLabelHours | default "Horário de funcionamento"
+            }}:</strong></div>
+        <div class="contact-value">{{ . }}</div>
+      </div>
+    </li>
+    {{- end -}}
+  </ul>
+</div>

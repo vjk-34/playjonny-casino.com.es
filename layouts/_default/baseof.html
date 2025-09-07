@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "en" }}">
+<head>
+  {{- partial "head.html" . -}}
+</head>
+{{- $activeVariant := site.Params.activeThemeVariant | default "default" -}}
+{{- $bodyClass := "" -}}
+{{- if and (ne $activeVariant "default") $activeVariant -}}
+  {{- $bodyClass = printf "theme-variant-%s" ($activeVariant | lower) -}}
+{{- end -}}
+<body class="{{- $bodyClass -}}{{- block "body-class" . -}}{{- end -}}">
+  <div class="site-wrapper">
+    {{- partial "header.html" . -}}
+    <main id="content" role="main">
+      {{- block "main" . -}}{{- end -}}
+    </main>
+    {{- partial "footer.html" . -}}
+  </div>
+
+  {{- $jsTemplate := resources.Get "js/app.js" -}}
+  {{- $jsProcessed := $jsTemplate | resources.ExecuteAsTemplate "app.js" . -}}
+  {{- $scripts := $jsProcessed | js.Build (dict "minify" true) | fingerprint -}}
+  {{- with $scripts -}}
+    <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+  {{- end -}}
+
+</body>
+</html>

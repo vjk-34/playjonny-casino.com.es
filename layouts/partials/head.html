@@ -1,0 +1,86 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{- $pageTitle := .Title -}}
+{{- $siteTitle := .Site.Title -}}
+<title>{{ if ne .Title $siteTitle }}{{ .Title }}{{ else }}{{ $siteTitle }}{{ end }}</title>
+
+{{- $pageDescription := .Description | default (.Summary | plainify | truncate 160) -}}
+{{- $siteDescription := .Site.Params.description -}}
+<meta name="description" content="{{ $pageDescription | default $siteDescription | plainify }}">
+
+{{- $pageKeywords := .Params.keywords -}}
+{{- $siteKeywords := .Site.Params.keywords -}}
+{{- with $pageKeywords | default $siteKeywords -}}
+  {{- $keywordsString := delimit . ", " -}}
+  <meta name="keywords" content="{{ $keywordsString | plainify }}">
+{{- end -}}
+
+{{- with .OutputFormats.Get "canonical" -}}
+  <link rel="canonical" href="{{ .Permalink }}">
+{{- else -}}
+  <link rel="canonical" href="{{ .Permalink }}">
+{{- end -}}
+
+{{- $faviconPNG := site.Params.faviconPNG -}}
+{{- with $faviconPNG -}}
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ . | relURL }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ replace . "32x32" "16x16" | relURL }}">
+{{- else -}}
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/favicon-32x32.png" | relURL }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/favicon-16x16.png" | relURL }}">
+{{- end -}}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "/apple-touch-icon.png" | relURL }}">
+<link rel="shortcut icon" href="{{ "/favicon.ico" | relURL }}">
+<link rel="manifest" href="{{ "/site.webmanifest" | relURL }}">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<meta property="og:title" content="{{ $pageTitle }}">
+<meta property="og:description" content="{{ $pageDescription | default $siteDescription | plainify }}">
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{- with .Params.hero_image | default .Site.Params.logo -}}
+  {{- $image := . -}}
+  {{- if reflect.IsMap . -}} {{- $image = .src -}} {{- end -}}
+  <meta property="og:image" content="{{ $image | absURL }}">
+{{- end -}}
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $pageTitle }}">
+<meta name="twitter:description" content="{{ $pageDescription | default $siteDescription | plainify }}">
+{{- with .Params.hero_image | default .Site.Params.logo -}}
+  {{- $image := . -}}
+  {{- if reflect.IsMap . -}} {{- $image = .src -}} {{- end -}}
+  <meta name="twitter:image" content="{{ $image | absURL }}">
+{{- end -}}
+
+{{- $googleFontsList := site.Params.activeGoogleFonts | default slice -}}
+{{- if gt (len $googleFontsList) 0 -}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {{- $fontQuery := delimit $googleFontsList "&family=" -}}
+  {{- $googleFontsURL := printf "https://fonts.googleapis.com/css2?family=%s&display=swap" $fontQuery -}}
+  <link href="{{ $googleFontsURL }}" rel="stylesheet">
+  {{- warnf "Загрузка Google Fonts: %s" $googleFontsURL -}}
+{{- else -}}
+  {{- warnf "Параметр site.Params.activeGoogleFonts пуст или не найден. Шрифты Google Fonts не подключены." -}}
+{{- end -}}
+
+{{- $options := (dict "transpiler" "libsass" "outputStyle" "compressed") -}}
+{{- $styles := resources.Get "scss/main.scss" | toCSS $options | fingerprint -}}
+{{- with $styles -}}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+{{- else -}}
+  {{- warnf "Не удалось скомпилировать SCSS. Проверьте assets/scss/main.scss" -}}
+{{- end -}}
+
+{{- $robotsContent := site.Params.defaultRobotsMetaTag | default "index, follow" -}}
+{{- with .Params.robots -}}{{- $robotsContent = . -}}{{- end -}}
+<meta name="robots" content="{{ $robotsContent }}">
+
+{{- partial "schema.html" . -}}
+
+{{- hugo.Generator -}}
+
+{{- block "head-extra" . -}}{{- end -}}
