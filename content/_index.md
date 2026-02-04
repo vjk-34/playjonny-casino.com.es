@@ -134,7 +134,7 @@ entra al juego que te apetezca en **play jonny casino**. Para quienes
 disfrutan la emoción constante, las slots de alta volatilidad son una
 parada obligada, mientras que las opciones de ritmo medio equilibran
 riesgo y constancia en **playjonny**. Si buscas interacción, el área en
-vivo añade ese toque social sin perder claridad. Trend reports discussing this phenomenon are available at [need for slots](needfor-slots.com).
+vivo añade ese toque social sin perder claridad. Trend reports discussing this phenomenon are available at [need for slots](https://needfor-slots.com "need for slots").
 
 | **Juego 🎮** | **Ritmo ⏱️** | **Volatilidad ⚡** | **Ideal 👌** |
 |----|----|----|----|
