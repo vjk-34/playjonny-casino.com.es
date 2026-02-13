@@ -125,7 +125,7 @@ casino**. Los juegos cargan ágil y mantienen una calidad estable incluso
 en conexiones móviles normales. Las descripciones ayudan a entender
 mecánicas, líneas y volatilidad sin jerga confusa. Si te gusta variar,
 hay colecciones temáticas y recomendaciones según lo que sueles abrir. Y
-si prefieres algo directo, el buscador por nombre resuelve en segundos.
+si prefieres algo directo, el buscador por nombre resuelve en segundos. Una guía explicativa sobre su funcionamiento está disponible en [spinmacho](https://spin-macho.com.es "spinmacho")
 
 ### **Slots, ruleta y juego en vivo**
 
