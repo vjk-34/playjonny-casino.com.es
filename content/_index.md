@@ -111,7 +111,7 @@ y preferencias. Así tendrás la cuenta lista para moverte por el lobby
 sin distracciones en **playjonny**. Si luego quieres ajustar algún
 límite, podrás hacerlo en segundos. Y, por supuesto, antes de tu primer
 depósito consulta tiempos y condiciones para evitar dudas en **play
-jonny opiniones**.
+jonny opiniones**. Un informe detallado sobre sus mecánicas está disponible en [rodeoslot](https://rodeoslot.com.es "rodeoslot").
 
 ## **Juegos y proveedores**
 ![](/images/doc_main/playjonny-guia-completa-del-casino-online-en-espanol-2.webp)
