@@ -68,7 +68,7 @@ faq:
 
 Si buscas una experiencia clara y directa, **playjonny** reúne lo
 esencial para empezar sin enredos y seguir jugando con confianza. Aquí
-encontrarás una visión honesta de lo que ofrece **playjonny casino**,
+encontrarás una visión honesta de lo que ofrece **[Play Jonny Casino](https://playjonnys.fr "Play Jonny Casino")**,
 desde el alta hasta la retirada. El objetivo es ayudarte a decidir
 rápido, sin promesas vacías ni letra pequeña. Además, verás consejos
 prácticos pensados para quienes hablan español, vivan donde vivan.
