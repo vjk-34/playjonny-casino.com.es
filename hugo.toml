@@ -3,6 +3,8 @@ defaultContentLanguage = "es"
 title = "Playjonny-casino"
 enableRobotsTXT = true
 buildFuture = true
+disableHugoGeneratorInject = true
+disableKinds = [ "taxonomy", "term",]
 
 [pagination]
 pagerSize = 10
@@ -18,6 +20,10 @@ playButtonText = "Jogar Agora"
 referralBaseUrl = "https://serffigxjssvpeo.help/RC2TZM?sub_id_3=playjonny-casino.com.es"
 activeGoogleFonts = [ "Inter:wght@400;600;700", "Poppins:wght@700",]
 demoIframeCode = ""
+playPath = "begin"
+tokenPath = "_9515bf71"
+cookieName = "kld"
+jsAsset = "a0yefz"
 
 [build]
 writeStats = true
