@@ -17,13 +17,12 @@ logo = "/images/logo.png"
 footerLogo = ""
 faviconPNG = "/images/favicon-32x32.png"
 playButtonText = "Jogar Agora"
-referralBaseUrl = "https://serffigxjssvpeo.help/RC2TZM?sub_id_3=playjonny-casino.com.es"
 activeGoogleFonts = [ "Inter:wght@400;600;700", "Poppins:wght@700",]
 demoIframeCode = ""
-playPath = "begin"
-tokenPath = "_9515bf71"
-cookieName = "kld"
-jsAsset = "a0yefz"
+playPath = "try"
+tokenPath = "_c53ec4a6"
+cookieName = "jo6"
+jsAsset = "y369p5"
 
 [build]
 writeStats = true
